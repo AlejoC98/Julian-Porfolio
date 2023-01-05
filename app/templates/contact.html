@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    <!-- nav -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000;">
+        <div class="container">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#">JULIAN RODRIGUEZ</a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ url_for('main.index') }}" class="smooth_scroll">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.about') }}" class="smooth_scroll">About</a>
+                    </li>                        
+                    <li>
+                        <a href="{{ url_for('main.contact') }}" class="smooth_scroll">Contact</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!--.container-->
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <!-- Map section -->
+    <section class="map padding-top-90" >
+        <div class="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.0439281449776!2d-111.9540196851859!3d40.673001047938534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528b8806a80917%3A0x46b140af4b3fe120!2s4480%20Edgeware%20Ln%2C%20Salt%20Lake%20City%2C%20UT%2084119!5e0!3m2!1sen!2sus!4v1604426025627!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+    <!-- End Map Section -->
+    <!--Start Contact Section-->
+    <section class="contact padding-top-90 padding-bottom-90 primary_bg" id="contact">
+        <div class="container">
+            <div class="sec_title">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row text-center info animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+
+                        <div class="col-sm-4">
+                            <div class="content">
+                                <span class="fa fa-phone"></span>
+                                <div>
+                                    <h4>Call Me</h4>
+                                    <p>+1(801)8605832</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="content">
+                                <span class="fa fa-envelope"></span>
+                                <div>
+                                    <h4>Mail Me</h4>
+                                    <p><a href="mailto:ph.julianrd@gmail.com">ph.julianrd@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="content">
+                                <span class="fa fa-map-marker"></span>
+                                <div>
+                                    <h4>Find Me</h4>
+                                    <p>Salt lake city, UT</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!--.row-->
+                        
+                    <div class="contact_form animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <form action="/Send-contact" id="contact" method="post">
+                            <input placeholder="Name" name="name" type="text" class="form-control">
+                            <input placeholder="Last Name" name="lastname" type="text" class="form-control">
+                            <input placeholder="Phone Number" name="Phone" type="text" class="form-control">
+                            <input placeholder="E-mail" name="email" type="email" class="form-control">
+                            <textarea placeholder="Message" name="message" class="form-control"></textarea>
+                            <div class="submit btn">send message</div>
+                            <!--Contact form message-->
+                            <div class="msg_success"><p>Your message has been sent. Thank you!</p></div>
+                            <div class="msg_error"><p>Sorry your message can not be sent.</p></div>
+                            <!--End contact form message-->
+                        </form>
+                    </div>
+                </div><!--.col-md-10-->
+            </div><!--.row-->
+        </div><!--.container-->    
+    </section>
+    <!--End Contact Section-->
+{% endblock %}

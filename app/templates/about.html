@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    <!-- nav -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000;">
+        <div class="container">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#">JULIAN RODRIGUEZ</a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{ url_for('main.index') }}" class="smooth_scroll">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.about') }}" class="smooth_scroll">About</a>
+                    </li>                        
+                    <li>
+                        <a href="{{ url_for('main.contact') }}" class="smooth_scroll">Contact</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!--.container-->
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <!--Start About Section-->
+    <section class="about padding-top-90 padding-bottom-90" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 about-img">
+                    <div class="my__img animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <img src="{{ url_for('static', filename = 'images/profile.jpg') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 padding-left-35">
+                    <h3 class="animated animated_scroll fadeInUp" style="animation-delay: 0.3s">Hi There! I am Julian Rodriguez</h3>
+                    <p class="animated animated_scroll fadeInUp" style="animation-delay: 0.3s">I'm 19 years old Photographer,musician, audio and video producer. I live in the United States and have been working for more than 3 years with photography and music. </p>
+                    <p class="animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        I perform very well in what I do, I focus on the perfection and detail of the projects that I own. I also strive to make an excellent mark on the world with my work.
+                    </p>
+
+                    <!-- Skills -->
+                    <div class="skills">
+
+                        <!--skill 1-->
+                        <div class="skill">
+                            <span>PHOTOGRAPHY</span>
+                            <span>98%</span>
+                            <div class="progress_bg">
+                                <div class="progress_bar"></div>
+                            </div>
+                        </div>
+
+                        <!--skill 2-->
+                        <div class="skill">
+                            <span>EDITION</span>
+                            <span>95%</span>
+                            <div class="progress_bg">
+                                <div class="progress_bar"></div>
+                            </div>
+                        </div>
+
+                        <!--skill 3-->
+                        <div class="skill">
+                            <span>RELIABILITY</span>
+                            <span>100%</span>
+                            <div class="progress_bg">
+                                <div class="progress_bar"></div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <!--Social links-->
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://plus.google.com/" target="_blank">
+                                <i class="fa fa-google"></i>
+                            </a>
+                            <a href="https://www.dribbble.com" target="_blank">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--.skills-->
+                    <div class="about_btns animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <a href="{{ url_for('main.contact') }}" class="smooth_scroll">Contact Me</a>
+                    </div>
+                </div><!--.col-sm-7-->
+            </div><!--.row-->
+        </div><!--.container-->
+    </section>
+    <!--End About Section-->
+
+    <!--Start Services Section-->
+    <section class="services padding-top-90 padding-bottom-90 primary_bg" id="services">
+        <div class="container">
+            <div class="sec_title">
+                <h2>services</h2>
+            </div>
+
+            <div class="row">
+                
+                <!--Service 1-->
+                <div class="col-md-3 col-sm-6 item animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <h3>Photography</h3>
+                        <p>capture the beauty of life itself.</p>
+                    </div>
+                </div>
+                
+                <!--Service 2-->
+                <div class="col-md-3 col-sm-6 item animated animated_scroll fadeInUp" style="animation-delay: 0.6s">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="fa fa-pencil-square"></i>
+                        </div>
+                        <h3>Edition</h3>
+                        <p>Perceive details that make a difference.</p>
+                    </div>
+                </div>
+
+                <!--Service 3-->
+                <div class="col-md-3 col-sm-6 item animated animated_scroll fadeInUp" style="animation-delay: 0.9s">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="fa fa-video-camera"></i>
+                        </div>
+                        <h3>Video</h3>
+                        <p>Remember every moment as if it were the last.</p>
+                    </div>
+                </div>
+                
+                <!--Service 4-->
+                <div class="col-md-3 col-sm-6 item animated animated_scroll fadeInUp" style="animation-delay: 1.2s">
+                    <div class="content">
+                        <div class="icon">
+                            <i class="fa fa-microphone"></i>
+                        </div>
+                        <h3>Audio Recording</h3>
+                        <p>Hear what the world wants to tell us.</p>
+                    </div>
+                </div>
+                
+            </div><!--.row-->
+        </div><!--.container-->
+    </section>
+    <!--End Services Section-->
+{% endblock %}

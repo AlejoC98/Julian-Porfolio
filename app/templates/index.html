@@ -1,0 +1,1036 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    <div class="full_height type" data-parallax="scroll">
+        <div id="particles-js"></div>
+        
+        <!-- nav -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand" href="#">JULIAN RODRIGUEZ</a>
+
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="{{ url_for('main.index') }}" class="smooth_scroll">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('main.about') }}" class="smooth_scroll">About</a>
+                        </li>                        
+                        <li>
+                            <a href="{{ url_for('main.contact') }}" class="smooth_scroll">Contact</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!--.container-->
+        </nav>
+        
+        <video class="fillWidth" autoplay muted loop>
+            <source src="{{ url_for('static', filename = 'video/presentation.webm') }}" type="video/webm" />
+            <source src="{{ url_for('static', filename = 'video/presentation.mp4') }}" type="video/mp4" />
+        </video>
+
+        <div class="display-table">
+            <div class="display-table-cell">
+                <h1>I'M <span id="typed"></span></h1>
+                <div id="typed-strings">
+                    <span>JULIAN RODRIGUEZ</span>
+                    <span>A PHOTOGRAPHER</span>
+                    <span>FROM COLOMBIA</span>
+                </div>
+                <ul class="text-center list-unstyled social">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-google-plus fa-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-dribbble fa-2x"></i>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="go_down">
+            <a href="#about" class="smooth_scroll">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div><!--.full_height-->
+{% endblock %}
+
+{% block content %}
+    <!--Start Portfolio Section-->
+    <section class="portfolio padding-top-90 padding-bottom-90" id="portfolio">
+        <div class="container">
+            <div class="sec_title">
+                <h2>portfolio</h2>
+            </div>
+            <ul class="list-unstyled ul-filter">
+                <li data-filter="*" class="active_filter">all</li>
+                <li data-filter=".animals">Animals</li>
+                <li data-filter=".events">Events</li>
+                <li data-filter=".phoyoshoots">Photo Shooting</li>                
+            </ul>
+            <div class="row grid">
+                
+                <!--project 1-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A1.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A1.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 2-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A2.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A2.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 3-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A3.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A3.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 4-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A4.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A4.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 5-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A5.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A5.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 6-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A6.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A6.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 7-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A7.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A7.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 8-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A8.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A8.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project 9-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-sizer grid-item animals">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/animals/A9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/animals/A9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Design</span> -->
+                                    <h3 class="title">Animals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 10-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B1.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B1.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 11-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B2.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B2.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 12-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B3.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B3.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 13-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B4.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B4.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 14-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B5.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B5.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 15-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B6.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B6.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 16-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B7.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B7.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 17-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B8.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B8.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--project 18-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/babyshowers/B9.jpg')}}">
+                            <img src="{{ url_for('static', filename = 'images/babyshowers/B9.jpg')}}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Marketing</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 19-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C1.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C1.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 20-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C2.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C2.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 21-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C3.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C3.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 22-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C4.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C4.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 23-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C5.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C5.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 24-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C6.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C6.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 25-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C7.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C7.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 26-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C8.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C8.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 27-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 28-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.3s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/birthdays/C10.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/birthdays/C10.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 29-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H1.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H1.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 30-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H2.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H2.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 31-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H3.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H3.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 32-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H4.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H4.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 33-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H5.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H5.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 34-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H6.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H6.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 35-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H7.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H7.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 36-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H8.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H8.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 37-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/halloween/H9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/halloween/H9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <span class="post">Design</span>
+                                    <h3 class="title">project name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 38-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M1.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M1.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 39-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M2.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M2.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 40-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M3.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M3.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 41-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M4.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M4.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 42-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M5.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M5.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 43-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M6.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M6.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 44-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M7.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M7.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 45-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M8.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M8.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 46-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item events">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/weddings/M9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/weddings/M9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Events</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 47-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S1.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S1.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 48-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S2.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S2.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 49-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S3.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S3.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 50-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S4.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S4.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 51-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S5.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S5.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 52-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S6.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S6.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 53-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S7.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S7.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 54-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--project 46-->
+                <div class="col-xs-12 col-sm-6 col-md-4 grid-item phoyoshoots">
+                    <div class="box animated animated_scroll fadeInUp" style="animation-delay: 0.4s">
+                        <div class="my_img" data-mfp-src="{{ url_for('static', filename = 'images/photoshoots/S9.jpg') }}">
+                            <img src="{{ url_for('static', filename = 'images/photoshoots/S9.jpg') }}" alt=''>
+                        </div>
+                        <div class="boxContent">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <!-- <span class="post">Photography</span> -->
+                                    <h3 class="title">Photo Shoots</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!--.row-->
+        </div><!--.container-->
+    </section>
+    <!--End Portfolio Section-->
+{% endblock %}
